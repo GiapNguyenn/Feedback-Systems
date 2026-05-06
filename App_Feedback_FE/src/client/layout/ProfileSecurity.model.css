@@ -1,0 +1,72 @@
+.security-options {
+    padding: 10px;
+}
+
+.otp-form {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.otp-note {
+    font-size: 13px;
+    color: #64748b;
+    text-align: center;
+}
+
+.form-input {
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-input:focus {
+    border-color: #6366f1;
+}
+
+.btn-confirm {
+    background-color: #6366f1;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-confirm:disabled {
+    background-color: #94a3b8;
+}
+
+.spinner {
+    animation: rotate 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.auth-confirm-box {
+    padding: 10px 15px;
+    background: #f8fafc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-icon {
+    position: absolute;
+    left: 10px;
+    color: #94a3b8;
+}
+.auth-confirm-box .form-input {
+    padding-left: 35px;
+    width: 100%;
+}

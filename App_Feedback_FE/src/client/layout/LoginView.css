@@ -1,0 +1,182 @@
+.login-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 5px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  outline: none;
+}
+
+.form-container input:focus {
+  border-color: #6366f1;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-back {
+  background: none;
+  border: none;
+  color: #94a3b8; /* Màu xám nhạt */
+  margin-top: 15px;
+  cursor: pointer;
+  text-decoration: none; /* 👈 CHÍNH LÀ DÒNG NÀY: Bỏ gạch chân */
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-back:hover {
+  color: #6366f1; /* Đổi sang màu tím khi di chuột vào */
+  transform: translateY(-1px); /* Bay nhẹ lên một chút */
+  text-decoration: none; /* Đảm bảo không hiện lại gạch chân khi hover */
+}
+
+.form-container {
+  max-width: 400px; /* Giới hạn độ rộng form để nhìn cân đối */
+  margin: 0 auto;  /* Căn giữa form trong cái Panel to */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 50px;
+}
+
+.form-container h4 {
+  text-align: center;
+  font-size: 24px;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+.remember-me {
+  display: flex;
+  align-items: center; /* Căn giữa checkbox và chữ theo chiều dọc */
+  gap: 8px;            /* Tạo khoảng cách giữa checkbox và chữ */
+  font-size: 14px;
+  color: #64748b;      /* Màu chữ xám nhẹ cho tinh tế */
+  cursor: pointer;
+  margin-bottom: 5px;  /* Khoảng cách với nút Đăng nhập bên dưới */
+  user-select: none;   /* Ngăn việc bôi đen chữ khi click nhầm */
+}
+
+.remember-me input[type="checkbox"] {
+  width: 16px;         /* Chỉnh kích thước checkbox cho vừa vặn */
+  height: 16px;
+  margin: 0;           /* Xóa margin mặc định của trình duyệt */
+  cursor: pointer;
+  accent-color: #6366f1; /* Đổi màu xanh cho khớp với nút submit */
+}
+.remember-me:hover {
+  color: #1e293b; /* Chữ đậm lên khi di chuột vào */
+}
+.remember-me input[type="checkbox"] {
+  transition: transform 0.2s;
+}
+
+.remember-me input[type="checkbox"]:active {
+  transform: scale(1.2); /* Phồng lên nhẹ khi click */
+}
+.forgot-pass-link {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.forgot-pass-link span {
+  font-size: 13px;
+  color: #6366f1;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.forgot-pass-link span:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+/* --- Container cho Loader --- */
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* --- Hiệu ứng rung nhẹ khi có lỗi (Optional) --- */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.form-error {
+  animation: shake 0.4s ease-in-out;
+}
+
+/* --- Nâng cấp Input --- */
+.form-container input {
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+}
+
+.form-container input:focus {
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  border-color: #6366f1;
+}
+
+/* Style cho nút Back tinh tế hơn */
+.btn-back:hover {
+  color: #6366f1;
+}
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.form-options {
+  display: flex;
+  justify-content: space-between; /* Đẩy 2 phần tử về 2 phía */
+  align-items: center;           /* Căn giữa cho bằng đầu nhau */
+  margin: 5px 0 15px 0;          /* Khoảng cách trên dưới */
+  width: 100%;
+}
+
+/* Xóa bỏ margin-bottom cũ để không bị lệch */
+.remember-me {
+  margin-bottom: 0 !important; 
+  white-space: nowrap;           /* Ngăn xuống dòng */
+}
+
+.forgot-pass-link {
+  margin-bottom: 0 !important;
+}
+
+/* Chỉnh lại font size cho đồng nhất */
+.remember-me, .forgot-pass-link span {
+  font-size: 13px;
+}

@@ -1,0 +1,200 @@
+.progressContainer {
+    min-height: 100vh;
+    padding: 32px;
+    background: #f1f5f9;
+}
+
+.progressHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.progressTitle {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.bulkRemindBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.tableWrapper {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.customTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.customTable thead tr {
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    color: white;
+}
+
+/* Bo góc cho Header */
+.customTable thead th:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+.customTable thead th:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+.customTable th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.customTable td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.tableRow {
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.tableRow:hover {
+    background-color: #f8fafc;
+}
+
+.studentName {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.studentCode {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.riskBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.highRisk {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.stuck {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.normal {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+/* CSS cho Modal (Đang thiếu trong file của bạn) */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modalContent {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modalClose {
+    background: #f1f5f9;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.riskBadge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Màu đỏ cho rủi ro cao */
+.highrisk {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+/* Màu vàng cho rủi ro vừa */
+.mediumrisk {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+/* Màu xanh cho an toàn */
+.lowrisk {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+.riskSelect {
+  padding: 8px 32px 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background-color: white;
+  color: #475569;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none; /* Bỏ icon mũi tên mặc định của trình duyệt */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23475569'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+.riskSelect:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.riskSelect option {
+  padding: 10px;
+}

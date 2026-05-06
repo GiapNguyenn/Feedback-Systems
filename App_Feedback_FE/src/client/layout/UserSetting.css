@@ -1,0 +1,374 @@
+.user-setting-wrapper {
+  position: relative;
+  margin-top: auto; /* Đẩy xuống đáy sidebar */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #6c5ce7;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.avatar-circle:hover {
+  transform: scale(1.1);
+  background-color: #5b4bc4;
+}
+
+.user-dropdown-menu {
+  position: absolute;
+  bottom: 55px; /* Hiện phía trên avatar */
+  left: 10px;
+  width: 200px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 9999;
+  padding: 10px 0;
+  animation: slideUp 0.2s ease-out;
+}
+
+.user-info-header {
+  padding: 10px 15px;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+}
+
+.user-email {
+  font-size: 11px;
+  color: #888;
+  margin: 0;
+}
+
+.menu-item {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.menu-item:hover {
+  background: #f5f5f5;
+}
+
+.menu-item.logout {
+  color: #e74c3c;
+}
+
+.menu-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 999;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.user-setting-wrapper {
+  position: relative;
+}
+
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #6366f1;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.user-dropdown-menu {
+  position: absolute;
+  bottom: 50px; /* Nhảy lên trên avatar */
+  left: 0;
+  width: 280px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border: 1px solid #f1f5f9;
+  z-index: 1001;
+  padding: 8px 0;
+  overflow: hidden;
+}
+
+.user-info-header {
+  padding: 12px 16px;
+}
+
+.user-name {
+  font-weight: 700;
+  margin: 0;
+  font-size: 15px;
+}
+
+.user-email {
+  font-size: 13px;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #f1f5f9;
+  margin: 8px 0;
+}
+
+.menu-item, .menu-item-static {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #334155;
+  transition: background 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #f8fafc;
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+/* Submenu Styles */
+.submenu-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.submenu-header:hover {
+  background-color: #f8fafc;
+}
+
+.fade-in {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.menu-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1000;
+}
+.user-card-large {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.avatar-big {
+    width: 60px; height: 60px;
+    background: #6366f1;
+    color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 10px;
+    font-size: 24px; font-weight: bold;
+}
+
+.user-card-large h4 { margin: 0; font-size: 16px; color: #1e293b; }
+.user-card-large p { font-size: 13px; color: #64748b; margin: 4px 0; }
+
+.role-tag {
+    font-size: 11px;
+    background: #eef2ff;
+    color: #6366f1;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.info-list {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.info-item {
+    display: flex; justify-content: space-between;
+    font-size: 13px; margin-bottom: 5px;
+}
+
+.info-item label { color: #94a3b8; }
+.info-item span { color: #1e293b; font-weight: 500; }
+
+.security-actions {
+    display: flex; gap: 10px;
+}
+
+.btn-outline {
+    flex: 1;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    padding: 8px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-outline:hover { background: #f1f5f9; border-color: #6366f1; color: #6366f1; }
+/* Container bọc các ô nhập liệu */
+.otp-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 10px;
+}
+
+.otp-step {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Style chung cho Input (Password, Email, OTP) */
+.form-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    outline: none;
+    background-color: #ffffff;
+    box-sizing: border-box; /* Đảm bảo không bị tràn khung */
+}
+
+/* Hiệu ứng khi nhấn vào ô nhập */
+.form-input:focus {
+    border-color: #6366f1; /* Màu tím chủ đạo */
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Label tiêu đề nhỏ phía trên input */
+.input-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+/* Button xác nhận */
+.btn-confirm {
+    width: 100%;
+    padding: 11px;
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-confirm:hover {
+    background-color: #4f46e5;
+}
+
+.btn-confirm:disabled {
+    background-color: #c7d2fe;
+    cursor: not-allowed;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px; /* Giảm padding một chút cho đỡ thô */
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  width: 100%;        /* Vẫn để 100% nhưng nó sẽ nằm trong padding của cha */
+  box-sizing: border-box; /* Đảm bảo padding không làm tràn khung */
+  cursor: pointer;
+  border: none;       /* Nếu là button thì bỏ border mặc định */
+  background: transparent;
+}
+
+/* Khoảng cách giữa icon và chữ */
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Dùng gap thay vì margin-left cho chuẩn */
+  font-size: 14px;
+}
+
+.menu-item:hover {
+  background-color: rgba(99, 102, 241, 0.05);
+}
+
+/* CSS cho cái công tắc nhỏ (Switch) */
+.theme-switch {
+  width: 36px;
+  height: 20px;
+  background-color: #cbd5e1;
+  border-radius: 12px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.theme-switch.anime {
+  background-color: #000000;
+}
+
+.switch-handle {
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: 0.3s;
+}
+
+.theme-switch.anime .switch-handle {
+  transform: translateX(16px); /* Nút gạt sang phải */
+}
